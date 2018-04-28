@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "NunitoSans-SemiBold";
+  src: url("./fonts/NunitoSans/NunitoSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: "NunitoSans";
+  src: url("./fonts/NunitoSans/NunitoSans.ttf");
+}
+/* Grid organization taken from W3Schools Tutorial on CSS Grids
+    Actually most of the unusual stuff in this is learned from W3Schools */
+
+body {
+  background-color: #DAE8BD;
+  grid-column: 2 / 4;
+  grid-row: 3;
+  margin: 0;
+}
+
+a {
+  color: #297C8F;
+  text-decoration: none;
+}
+
+p {
+	font-family: "NunitoSans", Sans-serif;
+}
+.container {
+  display: grid;
+  grid-template: auto auto auto auto / auto auto auto auto;
+  justify-items: stretch;
+  width: 100%;
+  height: auto;
+  margin-bottom: 300px;
+}
+
+header {
+  grid-column: 1 / 5;
+  grid-row: 1;
+  text-align: center;
+  font-family: "NunitoSans-SemiBold", Monospace;
+  color: #003322;
+  background-color: #9fc355;
+}
+
+nav {
+  grid-column: 1 / 5;
+  grid-row: 2;
+  background-color: #7ca55e;
+  border: 2px solid #476035;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+#shelfhead {
+	background-color: #000000;
+	text-align: center;
+}
+
+nav a {
+  padding: 20px;
+  color: #000;
+}
+
+nav a:hover {        /* a:hover syntax learned from W3Schools*/
+  color: #FFF;
+}
+.selected {
+  font-weight: bold;
+}
+
+.social {
+  text-align: center;
+  
+}
+.social ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+.social img {
+  min-width: 10px;
+  min-height: 10px;
+  max-width: 80px;
+  min-width: 80px;
+  self-align: center;
+}
+
+footer {
+  grid-column: 1 / 5;
+  grid-row: 4;
+  background-color: rgb(128, 128, 128);
+  background-color: hsla(0, 0%, 50%, 0.6);
+  color: #FFF;
+  text-align: right;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+}
+
+/* Footer positioning code taken from
+Bracco, C. (n.d.) "CSS "Always on the bottom" Footer".
+    Retrieved from https://codepen.io/cbracco/pen/zekgx */
+
+
+.pubs p {
+  padding-left: 22px ;
+  text-indent: -22px ;
+}
+
+  
+@media only screen and (min-width: 768px) {
+  nav li {
+    display: inline;
+  }
+}
